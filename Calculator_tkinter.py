@@ -28,6 +28,7 @@ class Program(tkinter.Tk):
             return
 
     def clear_content(self):
+        self.counter_dot=0
         self.textbox_show.delete(0,tkinter.END)
         self.textbox_show.focus_set()
 
