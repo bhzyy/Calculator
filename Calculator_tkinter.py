@@ -5,8 +5,8 @@ class Program(tkinter.Tk):
     counter_dot=0
     def add_char(self,text):
         result_box=self.textbox_show.get()
-        if text in self.operation and len(result_box)==0:
-            print("You cant put operation.")
+        if (text in self.operation or text=='.') and len(result_box)==0:
+            print("You can't put this at the beginning of your equation.")
             return
         if text!='.':
             if text in self.operation and result_box[len(result_box)-1] not in self.operation:
